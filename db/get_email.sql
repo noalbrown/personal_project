@@ -1,3 +1,3 @@
 SELECT *
-FROM users
+FROM user_profile
 WHERE email = $2
