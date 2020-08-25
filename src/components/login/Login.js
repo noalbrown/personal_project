@@ -53,11 +53,11 @@ const Login = (props) => {
   const register = () => {
     axios
       .post("/auth/register", {
-        user_name: userNameInput,
-        email: emailInput,
-        password: passwordInput,
-        first_name: firstNameInput,
-        last_name: lastNameInput
+        userNameInput,
+        emailInput,
+        passwordInput,
+        firstNameInput,
+        lastNameInput
       })
       .then((res) => {
         props.getUser();
