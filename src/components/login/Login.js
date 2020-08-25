@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { getUser } from '../../redux/reducer';
-import { connect, useStore } from 'react-redux';
+import { connect } from 'react-redux';
 
 const Login = (props) => {
   const [toggle, setToggle] = useState(true);
@@ -67,11 +67,11 @@ const Login = (props) => {
         alert("Email is already registered");
       });
   };
-
+  console.log(toggle)
   return (
     <div>
       <header>MyGameStash</header>
-      {{ toggle } ? (
+      {toggle ? (
         <section>
           <div>
             <input
@@ -147,4 +147,4 @@ const Login = (props) => {
   )
 }
 
-export default connect(null, { getUser }(Login));
+export default connect(null, { getUser })(Login);
