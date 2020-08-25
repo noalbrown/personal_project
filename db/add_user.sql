@@ -3,5 +3,5 @@ INSERT INTO user_profile
 VALUES
   ($1, $2, $3, $4, $5);
 SELECT user_id, user_name, email
-FROM users
-where user_name = $1;
+FROM user_profile
+where email = $1;
