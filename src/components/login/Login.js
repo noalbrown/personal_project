@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { getUser } from '../../redux/reducer';
 import { connect } from 'react-redux';
+import './login.css'
 
 const Login = (props) => {
   const [toggle, setToggle] = useState(true);
@@ -67,9 +68,9 @@ const Login = (props) => {
         alert("Email is already registered");
       });
   };
-  console.log(toggle)
+
   return (
-    <div>
+    <div className='login-container'>
       <header>MyGameStash</header>
       {toggle ? (
         <section>
