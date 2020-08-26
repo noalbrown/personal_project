@@ -71,70 +71,84 @@ const Login = (props) => {
 
   return (
     <div className='login-container'>
-      <header>MyGameStash</header>
+      <header id='login-header'>MyGameStash</header>
       {toggle ? (
-        <section>
-          <div>
-            <input
-              name='email'
-              type='text'
-              value={emailInput}
-              placeholder='Email'
-              onChange={handleEmailInput}
-            />
-            <input
-              name='password'
-              type='password'
-              value={passwordInput}
-              placeholder='Password'
-              onChange={handlePasswordInput}
-            />
-          </div>
-          <div>
-            <button onClick={login}>LOGIN</button>
-          </div>
-          <div>
-            <button onClick={() => { setToggle(!toggle) }}>Create New User</button>
-          </div>
-        </section>
-      ) : (
-          <section>
+        <section className='login-sections'>
+          <div className='login-boxes'>
             <div>
-              <input
-                name='user_name'
-                type='text'
-                value={userNameInput}
-                placeholder='User Name'
-                onChange={handleUserNameInput}
-              />
-              <input
+              <input className='login-input'
                 name='email'
                 type='text'
                 value={emailInput}
                 placeholder='Email'
                 onChange={handleEmailInput}
               />
-              <input
+            </div>
+            <div>
+              <input className='login-input'
                 name='password'
                 type='password'
                 value={passwordInput}
                 placeholder='Password'
                 onChange={handlePasswordInput}
               />
-              <input
-                name='first_name'
-                type='text'
-                value={firstNameInput}
-                placeholder='First Name'
-                onChange={handleFirstNameInput}
-              />
-              <input
-                name='last_name'
-                type='text'
-                value={lastNameInput}
-                placeholder='Last Name'
-                onChange={handleLastNameInput}
-              />
+            </div>
+          </div>
+          <div id='login-button-container'>
+            <button id='login-button' onClick={login}>LOGIN</button>
+          </div>
+          <div id='create-user-button-container'>
+            <button id='create-user-button' onClick={() => { setToggle(!toggle) }}>Create New User</button>
+          </div>
+        </section>
+      ) : (
+          <section className='login-sections'>
+            <div className='login-boxes'>
+              <div>
+                <input className='login-input'
+                  name='user_name'
+                  type='text'
+                  value={userNameInput}
+                  placeholder='User Name'
+                  onChange={handleUserNameInput}
+                />
+              </div>
+              <div>
+                <input className='login-input'
+                  name='email'
+                  type='text'
+                  value={emailInput}
+                  placeholder='Email'
+                  onChange={handleEmailInput}
+                />
+              </div>
+              <div>
+                <input className='login-input'
+                  name='password'
+                  type='password'
+                  value={passwordInput}
+                  placeholder='Password'
+                  onChange={handlePasswordInput}
+                />
+              </div>
+              <div>
+                <input className='login-input'
+                  name='first_name'
+                  type='text'
+                  value={firstNameInput}
+                  placeholder='First Name'
+                  onChange={handleFirstNameInput}
+                />
+              </div>
+              <div>
+                <input className='login-input'
+                  name='last_name'
+                  type='text'
+                  value={lastNameInput}
+                  placeholder='Last Name'
+                  onChange={handleLastNameInput}
+                />
+              </div>
             </div>
             <div>
               <button onClick={register}>Create Profile</button>
