@@ -34,10 +34,12 @@ module.exports = {
       res.status(401).send("Email or password incorrect");
     }
   },
-  // logout: async (req, res) => {
-  //   req.session.destroy();
-  //   res.status(200).send(req.session);
-  // },
+
+  logout: async (req, res) => {
+    req.session.destroy();
+    res.status(200).send(req.session);
+  },
+
   getUser: async (req, res) => {
     if (!req.session.user) {
       res.status(200).send({ user_name: "Guest", email: "guest", user_id: 1 });

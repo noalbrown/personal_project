@@ -1,8 +1,25 @@
 import axios from 'axios';
 
 const initialState = {
-  user: { userId: 0, email: '' }
+  user: { userId: 0, email: '' },
+  isLoggedIn: false
 };
+
+const LOGIN_USER = 'LOGIN_USER';
+export function loginUser(user) {
+  return {
+    type: LOGIN_USER,
+    payload: user
+  }
+}
+
+const LOGOUT_USER = 'LOGOUT_USER';
+export function logoutUser() {
+  return {
+    type: LOGOUT_USER,
+    payload: initialState
+  }
+}
 
 const GET_USER = 'GET_USER';
 export function getUser() {
@@ -20,15 +37,17 @@ export function getUser() {
 export default function reducer(state = initialState, action) {
   const { type, payload } = action;
   switch (type) {
-    case GET_USER + '_REJECTED':
-      return state;
-    case GET_USER + '_FULFILLED':
-      if (payload) {
-        return { ...state, user: payload };
-      } else return state;
+    case LOGIN_USER:
+      return { ...state, user: payload, isLoggedIn: true }
+    case LOGOUT_USER:
+      return { ...state, ...payload }
     case GET_USER + '_PENDING':
       return state;
+    case GET_USER + '_FULFILLED':
+      return { ...state, user: payload.data, isLoggedIn: true }
+    case GET_USER + '_REJECTED':
+      return initialState;
     default:
-      return state;
+      return initialState;
   }
 }
