@@ -76,6 +76,15 @@ const Login = (props) => {
     height: '100%'
   }
 
+  const newUserButtonStyle = {
+    backgroundColor: 'rgb(7, 224, 54)',
+    borderStyle: 'none',
+    height: '100%',
+    width: '100%',
+    fontSize: '1rem',
+    fontWeight: 'bolder'
+  }
+
   return (
     <div className='login-container'>
       <header id='login-header'>MyGameStash</header>
@@ -102,17 +111,23 @@ const Login = (props) => {
             </div>
           </div>
           <div id='login-button-container'>
-            <button id='login-button' onClick={login}>LOGIN</button>
+            <button
+              id='login-button'
+              onClick={login}
+            >LOGIN</button>
           </div>
           <div id='create-user-button-container'>
-            <button id='create-user-button' onClick={() => { setToggle(!toggle) }}>Create New User</button>
+            <button
+              id='create-user-button'
+              onClick={() => { setToggle(!toggle) }}
+            >Create New User</button>
           </div>
         </section>
       ) : (
           <section className='login-sections'>
             <div className='login-boxes'>
               <div style={boxSectionStyle}>
-                <input className='login-input'
+                <input className='new-user-input'
                   name='user_name'
                   type='text'
                   value={userNameInput}
@@ -121,7 +136,7 @@ const Login = (props) => {
                 />
               </div>
               <div style={boxSectionStyle}>
-                <input className='login-input'
+                <input className='new-user-input'
                   name='email'
                   type='text'
                   value={emailInput}
@@ -130,7 +145,7 @@ const Login = (props) => {
                 />
               </div>
               <div style={boxSectionStyle}>
-                <input className='login-input'
+                <input className='new-user-input'
                   name='password'
                   type='password'
                   value={passwordInput}
@@ -139,7 +154,7 @@ const Login = (props) => {
                 />
               </div>
               <div style={boxSectionStyle}>
-                <input className='login-input'
+                <input className='new-user-input'
                   name='first_name'
                   type='text'
                   value={firstNameInput}
@@ -148,7 +163,7 @@ const Login = (props) => {
                 />
               </div>
               <div style={boxSectionStyle}>
-                <input className='login-input'
+                <input className='new-user-input'
                   name='last_name'
                   type='text'
                   value={lastNameInput}
@@ -157,11 +172,17 @@ const Login = (props) => {
                 />
               </div>
             </div>
-            <div>
-              <button onClick={register}>Create Profile</button>
+            <div style={{ height: '10%', width: '40%' }}>
+              <button
+                style={newUserButtonStyle}
+                onClick={register}
+              >Create Profile</button>
             </div>
-            <div>
-              <button onClick={() => { setToggle(!toggle) }}>Cancel</button>
+            <div style={{ width: '30%' }}>
+              <button
+                style={newUserButtonStyle}
+                onClick={() => { setToggle(!toggle) }}
+              >Cancel</button>
             </div>
           </section>
         )}
