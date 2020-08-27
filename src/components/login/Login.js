@@ -69,13 +69,20 @@ const Login = (props) => {
       });
   };
 
+  const boxSectionStyle = {
+    display: 'flex',
+    justifyContent: 'center',
+    width: '100%',
+    height: '100%'
+  }
+
   return (
     <div className='login-container'>
       <header id='login-header'>MyGameStash</header>
       {toggle ? (
         <section className='login-sections'>
           <div className='login-boxes'>
-            <div>
+            <div style={boxSectionStyle}>
               <input className='login-input'
                 name='email'
                 type='text'
@@ -84,7 +91,7 @@ const Login = (props) => {
                 onChange={handleEmailInput}
               />
             </div>
-            <div>
+            <div style={boxSectionStyle}>
               <input className='login-input'
                 name='password'
                 type='password'
@@ -104,7 +111,7 @@ const Login = (props) => {
       ) : (
           <section className='login-sections'>
             <div className='login-boxes'>
-              <div>
+              <div style={boxSectionStyle}>
                 <input className='login-input'
                   name='user_name'
                   type='text'
@@ -113,7 +120,7 @@ const Login = (props) => {
                   onChange={handleUserNameInput}
                 />
               </div>
-              <div>
+              <div style={boxSectionStyle}>
                 <input className='login-input'
                   name='email'
                   type='text'
@@ -122,7 +129,7 @@ const Login = (props) => {
                   onChange={handleEmailInput}
                 />
               </div>
-              <div>
+              <div style={boxSectionStyle}>
                 <input className='login-input'
                   name='password'
                   type='password'
@@ -131,7 +138,7 @@ const Login = (props) => {
                   onChange={handlePasswordInput}
                 />
               </div>
-              <div>
+              <div style={boxSectionStyle}>
                 <input className='login-input'
                   name='first_name'
                   type='text'
@@ -140,7 +147,7 @@ const Login = (props) => {
                   onChange={handleFirstNameInput}
                 />
               </div>
-              <div>
+              <div style={boxSectionStyle}>
                 <input className='login-input'
                   name='last_name'
                   type='text'

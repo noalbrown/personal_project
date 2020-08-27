@@ -38,13 +38,13 @@
   justify-content: center;
   align-items: center;
 
-  div {
-    display:flex;
-    justify-content: center;
-    width:100%;
-    height:100%;
+  // div {
+  //   display:flex;
+  //   justify-content: center;
+  //   width:100%;
+  //   height:100%;
 
-  }
+  // }
 }
   
 .login-input{
@@ -56,11 +56,21 @@
         padding-top: 15px;
         
         &::placeholder {
-          color:white;
+          color:black;
           font-weight: 200;
           font-size: 2.5rem;
           font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
           letter-spacing: 0.75mm;
+        }
+
+        &:focus {
+          background:white;
+          color:black;
+          font-size: larger;
+
+          &:focus::placeholder{
+            color:transparent;
+          }
         }
 }
 
@@ -72,7 +82,7 @@
 #login-button {
   height:100%;
   width:100%;
-  background: green;
+  background: white;
   font-size: 2rem;
   font-weight: bolder;
   border-radius: 5%;
