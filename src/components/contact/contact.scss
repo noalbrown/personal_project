@@ -53,6 +53,10 @@
       color:black;
       font-weight: bold;
     }
+
+    &:focus::placeholder {
+      color:transparent;
+    }
   }
 }
 
@@ -72,6 +76,10 @@
       color:black;
       font-weight: bold;
     }
+
+    &:focus::placeholder {
+      color:transparent;
+    }
   }
 }
 
@@ -90,5 +98,24 @@
 
   button:hover {
     cursor: pointer;
+  }
+}
+
+@media (max-width: $media-desktop){
+  #contact-box {
+    height: 50%;
+    width: 60%;
+  }
+}
+
+@media (max-width: $media-tablet) {
+  #contact-box {
+    height: 65%;
+  }
+}
+
+@media (max-width: $media-mobile) {
+  #contact-box h1{
+    font-size:30px;
   }
 }

@@ -241,7 +241,7 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 400px) {
   #login-header {
     width: 100vw;
     left: 0;
