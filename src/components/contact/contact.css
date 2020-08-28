@@ -18,4 +18,131 @@
       -ms-flex-align: center;
           align-items: center;
 }
+
+#contact-box {
+  background: #07e036;
+  height: 60%;
+  width: 25%;
+  border: thick solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#contact-box h1 {
+  font-size: 40px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  position: relative;
+  top: -50px;
+}
+
+#contact-box form {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 40%;
+  width: 100%;
+}
+
+.contact-inputs div {
+  padding: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.contact-inputs input {
+  text-align: center;
+  height: 25px;
+  border: thin solid black;
+}
+
+.contact-inputs input::-webkit-input-placeholder {
+  color: black;
+  font-weight: bold;
+}
+
+.contact-inputs input:-ms-input-placeholder {
+  color: black;
+  font-weight: bold;
+}
+
+.contact-inputs input::-ms-input-placeholder {
+  color: black;
+  font-weight: bold;
+}
+
+.contact-inputs input::placeholder {
+  color: black;
+  font-weight: bold;
+}
+
+#contact-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+#contact-form input {
+  width: 75%;
+  height: 100px;
+  margin-top: 15px;
+  border: thin solid black;
+  text-align: center;
+}
+
+#contact-form input::-webkit-input-placeholder {
+  color: black;
+  font-weight: bold;
+}
+
+#contact-form input:-ms-input-placeholder {
+  color: black;
+  font-weight: bold;
+}
+
+#contact-form input::-ms-input-placeholder {
+  color: black;
+  font-weight: bold;
+}
+
+#contact-form input::placeholder {
+  color: black;
+  font-weight: bold;
+}
+
+#contact-button {
+  position: relative;
+  top: 60px;
+}
+
+#contact-button button {
+  background: black;
+  color: #07e036;
+  border: none;
+  border-radius: 5%;
+  height: 40px;
+  width: 80px;
+}
+
+#contact-button button:hover {
+  cursor: pointer;
+}
 /*# sourceMappingURL=contact.css.map */

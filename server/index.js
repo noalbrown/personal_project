@@ -30,6 +30,7 @@ app.use(
 );
 
 app.get('/api/users', ctrl.getAll);
+app.post('/api/post', ctrl.create);
 
 app.post("/auth/register", authCtrl.register);
 app.post("/auth/login", authCtrl.login);
