@@ -17,19 +17,20 @@ const Menu = (props) => {
   }
 
   return (
-    <div>
+    <div className='menu-container'>
       {
         props.isLoggedIn ?
-          <nav>
-            < ul >
-              <li><Link to="/home">Games</Link></li>
-              <li><Link to="/user">My List</Link></li>
-              <li><Link to="/contact">Contact</Link></li>
-              <li onClick={logoutUser}><Link to="/">Logout</Link></li>
-            </ul >
-          </nav >
+          <nav id='menu-nav'>
+            <h1 id='menu-header'>MyGameStash</h1>
+            <ul id='menu-list-container'>
+              <li className='menu-list'><Link to="/home">Games</Link></li>
+              <li className='menu-list'><Link to="/user">My List</Link></li>
+              <li className='menu-list'><Link to="/contact">Contact</Link></li>
+              <li className='menu-list' onClick={logoutUser}><Link to="/">Logout</Link></li>
+            </ul>
+          </nav>
           :
-          <h2>Please Log In</h2>
+          <div style={{ display: 'none' }}></div>
       }
     </div >
   )

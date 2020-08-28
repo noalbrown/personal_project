@@ -1,0 +1,42 @@
+@import '../../sass/config';
+
+.menu-container {
+  height: 100vh;
+  width:100vw;
+}
+
+#menu-nav{
+  background:black;
+  height:10%;
+  width:100%;
+  display: flex;
+  justify-content: space-between;
+	align-items: center;
+}
+
+#menu-header {
+  color:white;
+  height: 100%;
+  width:20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-family: $secondary-font;
+}
+
+#menu-list-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  width: 40%;
+  padding-right:10px;
+}
+
+.menu-list a {
+  color: $primary-color;
+  font-size: 1.25rem;
+  text-decoration:none;
+  font-style: $primary-font;
+}
