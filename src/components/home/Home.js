@@ -1,4 +1,5 @@
 import React from 'react';
+import './home.css';
 
 const Home = (props) => {
   // const baseUrl = '';
@@ -13,7 +14,7 @@ const Home = (props) => {
   // };
 
   return (
-    <div>
+    <div className='home-container'>
       <h1>Home</h1>
     </div>
   )

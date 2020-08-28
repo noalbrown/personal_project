@@ -1,8 +1,9 @@
 {
     "version": 3,
-    "mappings": "",
+    "mappings": "AAEA,AAAA,eAAe,CAAC;EACd,MAAM,EAAC,KAAK;EACZ,KAAK,EAAC,KAAK;EACX,gBAAgB,EAAE,iCAAiC;EACnD,iBAAiB,EAAE,SAAS;EAC5B,eAAe,EAAE,KAAK;EACtB,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,MAAM;EACtB,eAAe,EAAE,MAAM;EACvB,WAAW,EAAE,MAAM;CACpB",
     "sources": [
-        "user.scss"
+        "user.scss",
+        "../../sass/_config.scss"
     ],
     "names": [],
     "file": "user.css"
