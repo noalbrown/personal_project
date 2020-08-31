@@ -10,9 +10,11 @@ const Admin = (props) => {
 
   useEffect(() => {
     axios
-      .get("/api/users")
+      .get("/api/usersAdmin")
       .then((res) => {
-        setUsers(res.data);
+        setUsers(res.data)
+        setGameList(res.data)
+        setFormList(res.data);
       })
       .catch((err) => {
         console.log(err);
@@ -27,7 +29,7 @@ const Admin = (props) => {
       })
       .catch(error => console.log(error))
   }
-  console.log(gameList)
+  console.log(user, gameList, formList)
   return (
     <div className='admin-container'>
       <h1>ADMINISTRATOR AREA</h1>

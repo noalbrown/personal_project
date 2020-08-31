@@ -30,6 +30,7 @@ app.use(
 );
 
 app.get('/api/users', ctrl.getAll);
+app.get('/api/usersAdmin', ctrl.getAllAdmin)
 app.post('/api/post', ctrl.create);
 app.delete('/api/deleteUser', ctrl.delete)
 

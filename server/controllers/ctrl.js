@@ -10,6 +10,16 @@ module.exports = {
       });
   },
 
+  getAllAdmin: (req, res) => {
+    const db = req.app.get('db');
+    db.get_users_admin()
+      .then(get_users_admin => res.status(200).send(get_users_admin))
+      .catch(err => {
+        res.status(500).send({ errorMessage: "Could not Get" });
+        console.log(err)
+      });
+  },
+
   create: async (req, res) => {
     const db = req.app.get('db');
     const { user_name, email, form } = req.body;
