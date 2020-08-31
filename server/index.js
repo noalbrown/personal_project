@@ -31,6 +31,7 @@ app.use(
 
 app.get('/api/users', ctrl.getAll);
 app.post('/api/post', ctrl.create);
+app.delete('/api/deleteUser', ctrl.delete)
 
 app.post("/auth/register", authCtrl.register);
 app.post("/auth/login", authCtrl.login);

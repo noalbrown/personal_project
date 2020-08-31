@@ -5,7 +5,7 @@ module.exports = {
     db.get_users()
       .then(get_users => res.status(200).send(get_users))
       .catch(err => {
-        res.status(500).send({ errorMessage: "Error" });
+        res.status(500).send({ errorMessage: "Could not Get" });
         console.log(err)
       });
   },
@@ -20,7 +20,18 @@ module.exports = {
     db.create_post([form, foundUser.user_id])
       .then(() => res.sendStatus(200))
       .catch(err => {
-        res.status(500).send({ errorMessage: "Error" });
+        res.status(500).send({ errorMessage: "Could not create" });
+        console.log(err)
+      });
+  },
+
+  delete: async (req, res) => {
+    const db = req.app.get('db');
+    const { user_id } = req.params;
+    db.delete_user(user_id)
+      .then(() => res.sendStatus(200))
+      .catch(err => {
+        res.status(500).send({ errorMessage: 'Could not delete' });
         console.log(err)
       });
   },

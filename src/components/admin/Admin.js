@@ -1,24 +1,50 @@
 import React from 'react';
-import './admin.css'
+import axios from 'axios';
+import { useState, useEffect } from 'react';
+import './admin.css';
 
 const Admin = (props) => {
+  const [user, setUsers] = useState([{ user_name: '' }]);
+  const [gameList, setGameList] = useState([{ user_games: '' }]);
+  const [formList, setFormList] = useState([{ form: '' }]);
+
+  useEffect(() => {
+    axios
+      .get("/api/users")
+      .then((res) => {
+        setUsers(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
+
+  const deleteUser = (user_id) => {
+    axios
+      .delete(`/api/deleteUser/${user_id}`)
+      .then((res) => {
+        return res.data
+      })
+      .catch(error => console.log(error))
+  }
+  console.log(gameList)
   return (
     <div className='admin-container'>
       <h1>ADMINISTRATOR AREA</h1>
       <table>
         <ul>
           <li>
-            <tr className='delete-me-test-data'>
-              <th>Username</th>
-              <th>Game list</th>
-              <th>Form Input</th>
-              <th>Remove User</th>
+            <tr className='admin-table-row'>
+              <th>Username:</th>
+              <th>Game list:</th>
+              <th>Form Input:</th>
+              <th>Remove User:</th>
             </tr>
-            <tr className='delete-me-test-data'>
-              <td>SomeUserName</td>
-              <td>UsersGameList</td>
-              <td>UsersFormInputs</td>
-              <button>Delete User</button>
+            <tr className='admin-table-row'>
+              <td>{user[0].user_name}</td>
+              <td>{gameList[0].user_games}</td>
+              <td>{formList[0].form}</td>
+              <button onClick={deleteUser}>Delete User</button>
             </tr>
           </li>
         </ul>

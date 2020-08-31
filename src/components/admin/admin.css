@@ -5,6 +5,10 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -14,23 +18,38 @@
 }
 
 .admin-container h1 {
+  position: absolute;
+  top: 40px;
+  font-size: 2rem;
+  font-family: sans-serif;
   color: white;
+  padding: 5px;
 }
 
 .admin-container table {
-  border: thin solid #07e036;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 90%;
 }
 
-.delete-me-test-data {
+.admin-table-row {
   color: white;
   border: thin solid #07e036;
 }
 
-.delete-me-test-data th {
+.admin-table-row th {
   border: thin solid #07e036;
+  font-size: 1.25rem;
+  padding: 5px;
+  text-decoration: underline;
 }
 
-.delete-me-test-data td {
+.admin-table-row td {
   border: thin solid #07e036;
+  padding: 5px;
 }
 /*# sourceMappingURL=admin.css.map */
