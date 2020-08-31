@@ -10,10 +10,14 @@ module.exports = {
       });
   },
 
-  create: (req, res) => {
+  create: async (req, res) => {
     const db = req.app.get('db');
     const { user_name, email, form } = req.body;
-    db.create_post([user_name, email, form])
+    let foundUser = await db.get_email(email);
+    foundUser = foundUser[0];
+    delete foundUser.password;
+    console.log(foundUser)
+    db.create_post([form, foundUser.user_id])
       .then(() => res.sendStatus(200))
       .catch(err => {
         res.status(500).send({ errorMessage: "Error" });

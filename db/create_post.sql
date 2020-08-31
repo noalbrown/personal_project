@@ -1,6 +1,6 @@
 INSERT INTO contact_form
-  (form)
+  (form, user_id)
 VALUES
-  ($1);
+  ($1, $2);
 SELECT *
 FROM contact_form

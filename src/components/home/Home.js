@@ -15,7 +15,10 @@ const Home = (props) => {
 
   return (
     <div className='home-container'>
-      <h1>Home</h1>
+      <ul>
+        <li>Some Game Name</li>
+        <button>ADD</button>
+      </ul>
     </div>
   )
 }

@@ -4,7 +4,11 @@ import './user.css'
 const User = (props) => {
   return (
     <div className='user-container'>
-      <h1>User</h1>
+      <ul>
+        <img />
+        <li>Game Details</li>
+        <button>X</button>
+      </ul>
     </div>
   )
 }

@@ -11,4 +11,21 @@
   h1 {
     color:white
   }
+
+  table {
+    border: thin solid $primary-color;
+  }
+}
+
+.delete-me-test-data {
+  color:white;
+  border: thin solid $primary-color;
+
+  th {
+    border: thin solid $primary-color;
+  }
+
+  td {
+    border: thin solid $primary-color;
+  }
 }

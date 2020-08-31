@@ -16,4 +16,21 @@
 .admin-container h1 {
   color: white;
 }
+
+.admin-container table {
+  border: thin solid #07e036;
+}
+
+.delete-me-test-data {
+  color: white;
+  border: thin solid #07e036;
+}
+
+.delete-me-test-data th {
+  border: thin solid #07e036;
+}
+
+.delete-me-test-data td {
+  border: thin solid #07e036;
+}
 /*# sourceMappingURL=admin.css.map */
