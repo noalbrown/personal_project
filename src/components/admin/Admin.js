@@ -46,7 +46,9 @@ const Admin = (props) => {
               <td>{user[0].user_name}</td>
               <td>{gameList[0].user_games}</td>
               <td>{formList[0].form}</td>
-              <button onClick={deleteUser}>Delete User</button>
+              <div>
+                <button onClick={deleteUser}>Delete User</button>
+              </div>
             </tr>
           </li>
         </ul>

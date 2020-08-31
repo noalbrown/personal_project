@@ -5,7 +5,7 @@ const User = (props) => {
   return (
     <div className='user-container'>
       <ul>
-        <img />
+        <img alt='GameImage' />
         <li>Game Details</li>
         <button>X</button>
       </ul>
