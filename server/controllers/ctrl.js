@@ -37,8 +37,8 @@ module.exports = {
 
   delete: async (req, res) => {
     const db = req.app.get('db');
-    const { user_id } = req.params;
-    db.delete_user(user_id)
+    const { user_id, user_contact_id, user_game_id } = req.params;
+    db.delete_user(user_id, user_contact_id, user_game_id)
       .then(() => res.sendStatus(200))
       .catch(err => {
         res.status(500).send({ errorMessage: 'Could not delete' });

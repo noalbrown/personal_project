@@ -47,9 +47,9 @@ export default connect(mapStateToProps, { logoutUser, getUser })(withRouter(Menu
 
 
 // This is another way you can include your links
-{/* <Link>
+/* <Link>
          <p onClick={()=>this.props.history.push('/home')}>Games</p>
          <p onClick={()=>this.props.history.push('/user')} My List</p>
          <p onClick={()=>this.props.history.push('/contact')} >Contact</p>
          <Button onClick={this.logoutUser}>Logout</Button>
-      </Link> */}
+      </Link> */
