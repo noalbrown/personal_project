@@ -10,6 +10,17 @@ module.exports = {
       });
   },
 
+  getOne: (req, res) => {
+    const db = req.app.get('db');
+    const { id } = req.params;
+    db.get_userList(id)
+      .then(get_userList => res.status(200).send(get_userList))
+      .catch(err => {
+        res.status(500).send({ errorMessage: "Could not Get list" });
+        console.log(err)
+      });
+  },
+
   getAllAdmin: (req, res) => {
     const db = req.app.get('db');
     db.get_users_admin()
@@ -38,7 +49,7 @@ module.exports = {
   delete: async (req, res) => {
     const db = req.app.get('db');
     const { user_id, user_contact_id, user_game_id } = req.params;
-    db.delete_user([user_id, user_contact_id, user_game_id])
+    db.delete_user(user_id, user_contact_id, user_game_id)
       .then(() => res.sendStatus(200))
       .catch(err => {
         res.status(500).send({ errorMessage: 'Could not delete' });

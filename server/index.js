@@ -30,9 +30,10 @@ app.use(
 );
 
 app.get('/api/users', ctrl.getAll);
-app.get('/api/usersAdmin', ctrl.getAllAdmin)
+app.get('/api/userList', ctrl.getOne);
+app.get('/api/usersAdmin', ctrl.getAllAdmin);
 app.post('/api/post', ctrl.create);
-app.delete('/api/deleteUser', ctrl.delete)
+app.delete('/api/deleteUser', ctrl.delete);
 
 app.post("/auth/register", authCtrl.register);
 app.post("/auth/login", authCtrl.login);
