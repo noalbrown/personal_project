@@ -1,10 +1,10 @@
 import React from 'react';
-import "./menu.css";
 import { Link } from "react-router-dom";
 import { connect } from 'react-redux';
 import { logoutUser, getUser } from '../../redux/reducer';
 import { withRouter } from "react-router-dom"
 import axios from 'axios';
+import "./menu.css";
 
 const Menu = (props) => {
 
@@ -19,24 +19,23 @@ const Menu = (props) => {
 
   return (
     <div className='menu-container'>
-      {
-        props.isLoggedIn ?
-          <nav id='menu-nav'>
-            <h1 id='menu-header'>MyGameStash</h1>
-            <ul id='menu-list-container'>
-              {props.location.pathname !== "/home" ?
-                <li className='menu-list'><Link to="/home">Games</Link></li>
-                : null}
-              {props.location.pathname !== "/user" ?
-                <li className='menu-list'><Link to="/user">My List</Link></li>
-                : null}
-              {props.location.pathname !== "/contact" ?
-                <li className='menu-list'><Link to="/contact">Contact</Link></li>
-                : null}
-              <li className='menu-list' onClick={logoutUser}><Link to="/">Logout</Link></li>
-            </ul>
-          </nav>
-          : null}
+      {props.isLoggedIn ?
+        <nav id='menu-nav'>
+          <h1 id='menu-header'>MyGameStash</h1>
+          <ul id='menu-list-container'>
+            {props.location.pathname !== "/home" ?
+              <li className='menu-list'><Link to="/home">Games</Link></li>
+              : null}
+            {props.location.pathname !== "/user" ?
+              <li className='menu-list'><Link to="/user">My List</Link></li>
+              : null}
+            {props.location.pathname !== "/contact" ?
+              <li className='menu-list'><Link to="/contact">Contact</Link></li>
+              : null}
+            <li className='menu-list' onClick={logoutUser}><Link to="/">Logout</Link></li>
+          </ul>
+        </nav>
+        : null}
     </div >
   )
 }
