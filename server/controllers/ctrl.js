@@ -10,10 +10,10 @@ module.exports = {
       });
   },
 
-  getOne: (req, res) => {
+  getList: (req, res) => {
     const db = req.app.get('db');
-    const { id } = req.params;
-    db.get_userList(id)
+    const { user_game_id } = req.params;
+    db.get_userList(user_game_id)
       .then(get_userList => res.status(200).send(get_userList))
       .catch(err => {
         res.status(500).send({ errorMessage: "Could not Get list" });

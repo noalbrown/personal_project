@@ -52,13 +52,4 @@
   border: thin solid #07e036;
   padding: 5px;
 }
-
-.admin-table-row div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
 /*# sourceMappingURL=admin.css.map */

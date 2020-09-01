@@ -25,7 +25,7 @@ const Admin = (props) => {
       })
       .catch(error => console.log(error))
   }
-  console.log(deleteUser)
+
   return (
     <div className='admin-container'>
       <h1>ADMINISTRATOR AREA</h1>

@@ -172,7 +172,8 @@ const Login = (props) => {
                 />
               </div>
             </div>
-            <div style={{ height: '10%', width: '40%' }}>
+            <div
+              style={{ height: '10%', width: '40%' }}>
               <button
                 style={newUserButtonStyle}
                 onClick={register}

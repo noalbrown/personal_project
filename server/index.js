@@ -30,7 +30,7 @@ app.use(
 );
 
 app.get('/api/users', ctrl.getAll);
-app.get('/api/userList', ctrl.getOne);
+app.get('/api/userList/:user_game_id', ctrl.getList);
 app.get('/api/usersAdmin', ctrl.getAllAdmin);
 app.post('/api/post', ctrl.create);
 app.delete('/api/deleteUser', ctrl.delete);

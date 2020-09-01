@@ -24,8 +24,11 @@ export function logoutUser() {
 const GET_USER = 'GET_USER';
 export function getUser() {
   const user = axios
-    .get('./auth/user')
-    .then((res) => res.data)
+    .get('/auth/user')
+    .then((res) => {
+      console.log(res.data)
+      return res.data
+    })
     .catch((err) => console.log(err))
 
   return {
@@ -44,7 +47,7 @@ export default function reducer(state = initialState, action) {
     case GET_USER + '_PENDING':
       return state;
     case GET_USER + '_FULFILLED':
-      return { ...state, user: payload.data, isLoggedIn: true }
+      return { ...state, user: payload, isLoggedIn: true }
     case GET_USER + '_REJECTED':
       return initialState;
     default:
