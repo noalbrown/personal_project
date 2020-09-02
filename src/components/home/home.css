@@ -16,4 +16,32 @@
       -ms-flex-align: center;
           align-items: center;
 }
+
+.home-container section {
+  height: 60%;
+  width: 80%;
+  overflow: scroll;
+  border: thick solid black;
+  background: black;
+}
+
+.home-container section ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5px;
+  color: white;
+  font-size: 2rem;
+}
+
+#home-img-container {
+  background: yellow;
+  width: 30%;
+}
 /*# sourceMappingURL=home.css.map */

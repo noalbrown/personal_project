@@ -10,7 +10,6 @@ const User = (props) => {
 
   useEffect(() => {
     if (props.user) {
-      console.log(props.user)
       axios
         .get(`/api/userList/${props.user.user_id}`)
         .then((res) => {
@@ -30,7 +29,7 @@ const User = (props) => {
       })
       .catch(error => console.log(error))
   }
-  console.log(userList)
+
   return (
     <div className='user-container'>
       <h1>My List</h1>

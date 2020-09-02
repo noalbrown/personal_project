@@ -1,49 +1,53 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './home.css';
 
 const Home = (props) => {
-  const [gameInput, setGameInput] = useState('');
-  const [imgInput, setImgInput] = useState('');
-  // const baseUrl = '';
-  // const gameListUrl = `{baseUrl}`;
-  // const gameDetailsUrl = `{baseUrl}`;
+  const [gameInput, setGameInput] = useState([]);
 
-  // const getGame = async gameId => {
-  //   const result = await axios
-  //     .get(`${gameListUrl + gameId}.json`)
-  //     .then(({ data }) => data);
-  //   return result;
-  // };
-
-  const handleGameInput = (event) => {
-    const { value } = event.target;
-    setGameInput(value);
-  };
-
-  const handleImgInput = (event) => {
-    const { value } = event.target;
-    setImgInput(value);
-  };
+  const gameListUrl = 'https://rawg-video-games-database.p.rapidapi.com/games';
+  console.log(process.env.REACT_APP_API_KEY)
+  useEffect(() => {
+    axios
+      .get(`${gameListUrl}`, {
+        headers: {
+          "x-rapidapi-host": "rawg-video-games-database.p.rapidapi.com",
+          "x-rapidapi-key": process.env.REACT_APP_API_KEY,
+          "useQueryString": true
+        }
+      })
+      .then((res) => {
+        setGameInput(res.data.results)
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
 
   const addGame = () => {
     axios
       .post('/api/addGame', {
         user_games: gameInput,
-        game_img: imgInput,
       })
       .then((res) => { })
       .catch((err) => {
         alert("Cannot Add Game");
       });
   };
-
+  console.log(gameInput)
   return (
     <div className='home-container'>
-      <ul>
-        <li>Some Game Name</li>
-        <button onCLick={addGame}>ADD</button>
-      </ul>
+      <section>
+        {gameInput.map((el, i) =>
+          <ul key={i}>
+            <li id='home-img-container'>
+              <img alt='Game Cover' src={el.background_image} style={{ height: 100 }} />
+            </li>
+            <li>{el.name}</li>
+            <button onClick={addGame}>ADD</button>
+          </ul>
+        )}
+      </section>
     </div>
   )
 }

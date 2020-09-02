@@ -8,4 +8,26 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  section{
+    height:60%;
+    width:80%;
+    overflow:scroll;
+    border:thick solid black;
+    background: black;
+
+    ul {
+      display:flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 5px;
+      color:white;
+      font-size: 2rem;
+    }
+  }
+}
+
+#home-img-container {
+  background:yellow;
+  width: 30%;
 }
