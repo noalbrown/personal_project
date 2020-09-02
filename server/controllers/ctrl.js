@@ -37,8 +37,21 @@ module.exports = {
     let foundUser = await db.get_email(email);
     foundUser = foundUser[0];
     delete foundUser.password;
-    console.log(foundUser)
     db.create_post([form, foundUser.user_id])
+      .then(() => res.sendStatus(200))
+      .catch(err => {
+        res.status(500).send({ errorMessage: "Could not create" });
+        console.log(err)
+      });
+  },
+
+  addGame: async (req, res) => {
+    const db = req.app.get('db');
+    const { user_games, game_img } = req.body;
+    let foundUser = await db.get_email(email);
+    foundUser = foundUser[0];
+    delete foundUser.password;
+    db.add_game([user_games, game_img, foundUser.user_id])
       .then(() => res.sendStatus(200))
       .catch(err => {
         res.status(500).send({ errorMessage: "Could not create" });

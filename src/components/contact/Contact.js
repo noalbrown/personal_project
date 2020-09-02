@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './contact.css'
+import './contact.css';
 import axios from 'axios';
 
 const Contact = (props) => {

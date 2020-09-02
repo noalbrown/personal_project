@@ -33,6 +33,7 @@ app.get('/api/users', ctrl.getAll);
 app.get('/api/userList/:user_game_id', ctrl.getList);
 app.get('/api/usersAdmin', ctrl.getAllAdmin);
 app.post('/api/post', ctrl.create);
+app.post('/api/addGame', ctrl.addGame);
 app.delete('/api/deleteUser', ctrl.delete);
 
 app.post("/auth/register", authCtrl.register);
