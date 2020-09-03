@@ -15,7 +15,6 @@
     overflow:scroll;
     overflow-x: hidden;
     background: black;
-    scrollbar-color: black green;
 
     ul {
       display:flex;
@@ -26,6 +25,24 @@
       font-size: 2rem;
       height: 40%;
       border-bottom: thin solid $primary-color;
+
+      button {
+        background: $primary-color;
+        border:none;
+        border-radius: 5%;
+        height:30px;
+        width:10%;
+        font-family: $primary-font;
+        font-weight: bolder;
+        font-size:1.25rem;
+        letter-spacing: 0.1rem;
+        margin-right: 20px;
+      }
+
+      button:hover {
+        cursor: pointer;
+        font-size: 1.5rem;
+      }
     }
   }
 }

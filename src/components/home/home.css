@@ -23,7 +23,6 @@
   overflow: scroll;
   overflow-x: hidden;
   background: black;
-  scrollbar-color: black green;
 }
 
 .home-container section ul {
@@ -41,6 +40,24 @@
   font-size: 2rem;
   height: 40%;
   border-bottom: thin solid #07e036;
+}
+
+.home-container section ul button {
+  background: #07e036;
+  border: none;
+  border-radius: 5%;
+  height: 30px;
+  width: 10%;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-weight: bolder;
+  font-size: 1.25rem;
+  letter-spacing: 0.1rem;
+  margin-right: 20px;
+}
+
+.home-container section ul button:hover {
+  cursor: pointer;
+  font-size: 1.5rem;
 }
 
 #home-img-container {
