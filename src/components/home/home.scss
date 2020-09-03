@@ -13,8 +13,9 @@
     height:60%;
     width:80%;
     overflow:scroll;
-    border:thick solid black;
+    overflow-x: hidden;
     background: black;
+    scrollbar-color: black green;
 
     ul {
       display:flex;
@@ -23,11 +24,13 @@
       padding: 5px;
       color:white;
       font-size: 2rem;
+      height: 40%;
+      border-bottom: thin solid $primary-color;
     }
   }
 }
 
 #home-img-container {
-  background:yellow;
   width: 30%;
+  height:100%;
 }

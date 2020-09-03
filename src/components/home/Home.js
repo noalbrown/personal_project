@@ -41,7 +41,7 @@ const Home = (props) => {
         {gameInput.map((el, i) =>
           <ul key={i}>
             <li id='home-img-container'>
-              <img alt='Game Cover' src={el.background_image} style={{ height: 100 }} />
+              <img alt='Game Cover' src={el.background_image} style={{ height: '100%', width: '100%', backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }} />
             </li>
             <li>{el.name}</li>
             <button onClick={addGame}>ADD</button>

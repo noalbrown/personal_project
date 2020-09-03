@@ -21,8 +21,9 @@
   height: 60%;
   width: 80%;
   overflow: scroll;
-  border: thick solid black;
+  overflow-x: hidden;
   background: black;
+  scrollbar-color: black green;
 }
 
 .home-container section ul {
@@ -38,10 +39,12 @@
   padding: 5px;
   color: white;
   font-size: 2rem;
+  height: 40%;
+  border-bottom: thin solid #07e036;
 }
 
 #home-img-container {
-  background: yellow;
   width: 30%;
+  height: 100%;
 }
 /*# sourceMappingURL=home.css.map */
