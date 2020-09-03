@@ -36,7 +36,7 @@ const User = (props) => {
       <table>
         <thead>
           {userList.map((el, i) => <tr key={i} className='user-table-row'>
-            <td id='table-data-1'>{el.game_img}</td>
+            <td id='table-data-1'>{el.user_games.background_image}</td>
             <td id='table-data-2'>{el.user_games}</td>
             <td id='table-data-3'>
               <button onClick={deleteList}>X</button>

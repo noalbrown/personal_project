@@ -27,7 +27,7 @@ const Home = (props) => {
   const addGame = () => {
     axios
       .post('/api/addGame', {
-        user_games: gameInput,
+        user_games: gameInput.id
       })
       .then((res) => { })
       .catch((err) => {

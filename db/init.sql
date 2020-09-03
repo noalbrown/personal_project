@@ -19,6 +19,5 @@ CREATE TABLE game_list
 (
   user_game_id SERIAL PRIMARY KEY,
   user_games INT,
-  game_img TEXT,
   user_id INT REFERENCES user_profile(user_id)
 );

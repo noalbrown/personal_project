@@ -1,6 +1,6 @@
 INSERT INTO game_list
-  (user_games, game_img)
+  (user_games)
 VALUES
-  ($1, $2);
+  ($1);
 SELECT *
 FROM game_list

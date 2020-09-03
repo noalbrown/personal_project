@@ -47,11 +47,11 @@ module.exports = {
 
   addGame: async (req, res) => {
     const db = req.app.get('db');
-    const { user_games, game_img } = req.body;
+    const { user_games, email } = req.body;
     let foundUser = await db.get_email(email);
     foundUser = foundUser[0];
     delete foundUser.password;
-    db.add_game([user_games, game_img, foundUser.user_id])
+    db.add_game([user_games, foundUser.user_id])
       .then(() => res.sendStatus(200))
       .catch(err => {
         res.status(500).send({ errorMessage: "Could not create" });
