@@ -69,4 +69,14 @@ module.exports = {
         console.log(err)
       });
   },
+
+  deleteGame: async (req, res) => {
+    const db = req.app.get('db');
+    db.delete_game(req.params.user_game_id)
+      .then((game_list) => res.status(200).send(game_list))
+      .catch(err => {
+        res.status(500).send({ errorMessage: 'Could not delete' });
+        console.log(err)
+      });
+  },
 }

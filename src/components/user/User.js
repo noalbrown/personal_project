@@ -21,11 +21,11 @@ const User = (props) => {
     }
   }, [props.user]);
 
-  const deleteList = (user_game_id) => {
+  const deleteGame = (user_game_id) => {
     axios
-      .delete(`/api/deleteUser/${(user_game_id)}`)
+      .delete(`/api/deleteGame/${(user_game_id)}`)
       .then((res) => {
-        return res.data
+        setUserList(res.data)
       })
       .catch(error => console.log(error))
   }
@@ -39,7 +39,7 @@ const User = (props) => {
             <td id='table-data-1'>{el.user_games.background_image}</td>
             <td id='table-data-2'>{el.user_games}</td>
             <td id='table-data-3'>
-              <button onClick={deleteList}>X</button>
+              <button onClick={() => deleteGame(el.user_game_id)}>X</button>
             </td>
           </tr>)}
         </thead>

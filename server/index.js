@@ -35,6 +35,7 @@ app.get('/api/usersAdmin', ctrl.getAllAdmin);
 app.post('/api/post', ctrl.create);
 app.post('/api/addGame', ctrl.addGame);
 app.delete('/api/deleteUser', ctrl.delete);
+app.delete('/api/deleteGame/:user_game_id', ctrl.deleteGame);
 
 app.post("/auth/register", authCtrl.register);
 app.post("/auth/login", authCtrl.login);
