@@ -1,13 +1,9 @@
 @import '../../sass/config';
+@import '../../sass/utilities';
 
 .login-container {
-  height:100vh;
-  width:100vw;
+  @include baseContainer;
   background-image: url("/imgs/videogamecontroller_background.jpg");
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 #login-header {

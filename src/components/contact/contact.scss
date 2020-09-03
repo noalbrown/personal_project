@@ -1,15 +1,11 @@
 @import '../../sass/config';
+@import '../../sass/utilities';
 
 .contact-container {
-  height:100vh;
-  width:100vw;
+  @include baseContainer;
   background-image: url("/imgs/1b55e4bdb4fc6051382e370bf26d5a59.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 #contact-box {

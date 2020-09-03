@@ -17,9 +17,9 @@ const Admin = (props) => {
       });
   }, []);
 
-  const deleteUser = (user_id, user_contact_id, user_game_id) => {
+  const deleteUser = (user_id) => {
     axios
-      .delete(`/api/deleteUser/${(user_id, user_contact_id, user_game_id)}`)
+      .delete(`/api/deleteUser/${(user_id)}`)
       .then((res) => {
         return res.data
       })
@@ -27,7 +27,7 @@ const Admin = (props) => {
   }
 
   return (
-    <div className='admin-container'>
+    <div className='admin-container' style={{ backgroundColor: 'black' }}>
       <h1>ADMINISTRATOR AREA</h1>
       <table>
         <thead>
