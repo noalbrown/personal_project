@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { getUser } from '../../redux/reducer';
 import { connect } from 'react-redux';
-import './login.css'
+import { boxSectionStyle, newUserButtonStyle } from './LoginStyle';
+import './login.css';
 
 const Login = (props) => {
   const [toggle, setToggle] = useState(true);
@@ -68,22 +69,6 @@ const Login = (props) => {
         alert("Email is already registered");
       });
   };
-
-  const boxSectionStyle = {
-    display: 'flex',
-    justifyContent: 'center',
-    width: '100%',
-    height: '100%'
-  }
-
-  const newUserButtonStyle = {
-    backgroundColor: 'rgb(7, 224, 54)',
-    borderStyle: 'none',
-    height: '100%',
-    width: '100%',
-    fontSize: '1rem',
-    fontWeight: 'bolder'
-  }
 
   return (
     <div className='login-container'>

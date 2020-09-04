@@ -5,18 +5,18 @@
   @include baseContainer;
   background-image: url("/imgs/videogamecontroller_background.jpg");
 }
-
-#login-header {
-    color:white;
-    position: absolute;
-    left:80px;
-    top:40px;
-    font-size:40px;
-    font-family: $secondary-font;
-    font-style: italic;
-    letter-spacing: 1mm;
-}
   
+#login-header {
+  color: white;
+  position: absolute;
+  left: 80px;
+  top: 40px;
+  font-size: 40px;
+  font-family: $secondary-font;
+  font-style: 'italic';
+  letter-spacing: 1mm;
+}
+
 .login-sections {
       background:black;
       height:60%;
