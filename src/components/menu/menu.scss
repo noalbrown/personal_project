@@ -1,20 +1,5 @@
 @import '../../sass/config';
 
-.menu-container {
-  height: 10%;
-  width: 100vw;
-  position: absolute;
-}
-
-#menu-nav{
-  background:black;
-  height:100%;
-  width:100%;
-  display: flex;
-  justify-content: space-between;
-	align-items: center;
-}
-
 #menu-header {
   color:white;
   height: 100%;

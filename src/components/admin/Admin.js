@@ -41,8 +41,8 @@ const Admin = (props) => {
             <td>{el.user_name}</td>
             <td>{el.user_games}</td>
             <td>{el.form}</td>
-            <td>
-              <button onClick={deleteUser}>Delete User</button>
+            <td id='admin-button-container'>
+              <button onClick={deleteUser}>"Delete User"</button>
             </td>
           </tr>)}
         </thead>

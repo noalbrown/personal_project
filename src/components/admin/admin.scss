@@ -16,7 +16,7 @@
   table {
     display: flex;
     justify-content: center;
-    width:90%;
+    width:80%;
   }
 }
 
@@ -37,3 +37,53 @@
   }
 }
 
+#admin-button-container {
+  display: flex;
+  justify-content: center;
+  border: none;
+
+  button {
+    background: linen;
+    border:thick solid red;
+    color: black;
+    font-weight: bolder;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1rem;
+    margin: 5px 20px;
+  }
+
+  button:hover{
+    cursor: pointer;
+  }
+}
+
+@media (max-width: $media-mobile) {
+  .admin-container h1 {
+    font-size: 1.3rem;
+    position: fixed;
+    left: 40px;
+  }
+
+  table {
+    height: 50%;
+    width:100%;
+    position: fixed;
+    left:20px;
+    }
+
+    .admin-table-row {
+      th {
+        font-size: 0.75rem;
+      }
+
+      td {
+        font-size: 0.75rem;
+      }
+    }
+
+    #admin-button-container {
+      button {
+        font-size: 0.75rem;
+      }
+    }
+}

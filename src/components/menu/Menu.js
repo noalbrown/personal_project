@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, withRouter } from "react-router-dom";
 import { connect } from 'react-redux';
 import { logoutUser, getUser } from '../../redux/reducer';
+import { menuContainer, menuNav } from './MenuStyle'
 import axios from 'axios';
 import "./menu.css";
 
@@ -17,9 +18,9 @@ const Menu = (props) => {
   }
 
   return (
-    <div className='menu-container'>
+    <div style={menuContainer}>
       {props.isLoggedIn ?
-        <nav id='menu-nav'>
+        <nav style={menuNav}>
           <h1 id='menu-header'>MyGameStash</h1>
           <ul id='menu-list-container'>
             {props.location.pathname !== "/home" ?

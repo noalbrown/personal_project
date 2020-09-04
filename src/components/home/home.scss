@@ -47,3 +47,23 @@
   width: 25%;
   height:100%;
 }
+
+@media (max-width: $media-desktop) {
+  .home-container > section > ul {
+    height: 20%;
+  }
+}
+
+@media (max-width: $media-mobile) {
+  .home-container {
+    li {
+      font-size: 0.75rem;
+    }
+
+    section > ul > button {
+      font-size: 1rem;
+      margin-right: 0;
+      width:20%;
+    }
+  }
+}

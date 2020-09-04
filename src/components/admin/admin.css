@@ -32,7 +32,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 90%;
+  width: 80%;
 }
 
 .admin-table-row {
@@ -50,5 +50,52 @@
 .admin-table-row td {
   border: thin solid #07e036;
   padding: 5px;
+}
+
+#admin-button-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: none;
+}
+
+#admin-button-container button {
+  background: linen;
+  border: thick solid red;
+  color: black;
+  font-weight: bolder;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 1rem;
+  margin: 5px 20px;
+}
+
+#admin-button-container button:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 400px) {
+  .admin-container h1 {
+    font-size: 1.3rem;
+    position: fixed;
+    left: 40px;
+  }
+  table {
+    height: 50%;
+    width: 100%;
+    position: fixed;
+    left: 20px;
+  }
+  .admin-table-row th {
+    font-size: 0.75rem;
+  }
+  .admin-table-row td {
+    font-size: 0.75rem;
+  }
+  #admin-button-container button {
+    font-size: 0.75rem;
+  }
 }
 /*# sourceMappingURL=admin.css.map */
