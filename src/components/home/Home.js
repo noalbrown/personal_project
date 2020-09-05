@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import { gameImgStyle } from './HomeStyle'
+import { connect } from 'react-redux'
+import { withRouter } from 'react-router-dom'
 import axios from 'axios';
 import './home.css';
 
@@ -24,13 +27,14 @@ const Home = (props) => {
       });
   }, []);
 
-  const addGame = () => {
+  const addGame = (id) => {
+    console.log(props)
     axios
       .post('/api/addGame', {
-        user_games: gameInput.id
+        user_games: id,
+        email: props.user.email
       })
       .then((res) => {
-        props.getUser();
         props.history.push('/user');
       })
       .catch((err) => {
@@ -40,14 +44,28 @@ const Home = (props) => {
   console.log(gameInput)
   return (
     <div className='home-container'>
+      <header>
+        <div>
+          <input id='home-search-input'
+            name='search'
+            type='text'
+            // value={}
+            placeholder='Game Name'
+          // onChange={}
+          />
+        </div>
+        <div>
+          <button id='home-search-button'>Find Game</button>
+        </div>
+      </header>
       <section>
         {gameInput.map((el, i) =>
           <ul key={i}>
             <li id='home-img-container'>
-              <img alt='Game Cover' src={el.background_image} style={{ height: '100%', width: '100%', backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }} />
+              <img alt='Game Cover' src={el.background_image} style={gameImgStyle} />
             </li>
             <li>{el.name}</li>
-            <button onClick={addGame}>ADD</button>
+            <button onClick={() => addGame(el.id)}>ADD</button>
           </ul>
         )}
       </section>
@@ -55,4 +73,6 @@ const Home = (props) => {
   )
 }
 
-export default Home;
+const mapStateToProps = state => state;
+
+export default connect(mapStateToProps)(withRouter(Home));

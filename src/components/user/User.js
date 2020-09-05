@@ -10,22 +10,26 @@ const User = (props) => {
 
   useEffect(() => {
     if (props.user) {
-      axios
-        .get(`/api/userList/${props.user.user_id}`)
-        .then((res) => {
-          setUserList(res.data)
-        })
-        .catch((err) => {
-          console.log(err);
-        });
+      getGame();
     }
   }, [props.user]);
+
+  const getGame = () => {
+    axios
+      .get(`/api/userList/${props.user.user_id}`)
+      .then((res) => {
+        setUserList(res.data)
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }
 
   const deleteGame = (user_game_id) => {
     axios
       .delete(`/api/deleteGame/${(user_game_id)}`)
       .then((res) => {
-        setUserList(res.data)
+        getGame();
       })
       .catch(error => console.log(error))
   }
