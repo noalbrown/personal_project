@@ -29,7 +29,10 @@ const Home = (props) => {
       .post('/api/addGame', {
         user_games: gameInput.id
       })
-      .then((res) => { })
+      .then((res) => {
+        props.getUser();
+        props.history.push('/user');
+      })
       .catch((err) => {
         alert("Cannot Add Game");
       });

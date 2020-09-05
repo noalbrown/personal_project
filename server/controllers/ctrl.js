@@ -59,11 +59,10 @@ module.exports = {
       });
   },
 
-  delete: async (req, res) => {
+  deleteUser: async (req, res) => {
     const db = req.app.get('db');
-    const { user_id } = req.params;
-    db.delete_user(user_id)
-      .then(() => res.sendStatus(200))
+    db.delete_user(req.params.user_id)
+      .then((user_list) => res.send(user_list))
       .catch(err => {
         res.status(500).send({ errorMessage: 'Could not delete' });
         console.log(err)

@@ -46,3 +46,19 @@
     font-weight: bolder;
   }
 }
+
+#user-empty {
+  @include baseContainer;
+  background: $primary-color;
+  font-family: $secondary-font;
+  font-weight: bolder;
+
+  h2 {
+    font-size: 3rem;
+    padding: 50px;
+  }
+
+  p {
+    font-size: 1.25rem;
+  }
+}

@@ -21,7 +21,7 @@ const Admin = (props) => {
     axios
       .delete(`/api/deleteUser/${(user_id)}`)
       .then((res) => {
-        return res.data
+        setUsers(res.data)
       })
       .catch(error => console.log(error))
   }
@@ -42,7 +42,7 @@ const Admin = (props) => {
             <td>{el.user_games}</td>
             <td>{el.form}</td>
             <td id='admin-button-container'>
-              <button onClick={deleteUser}>"Delete User"</button>
+              <button onClick={() => deleteUser(el.user_id)}>"Delete User"</button>
             </td>
           </tr>)}
         </thead>
