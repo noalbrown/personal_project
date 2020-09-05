@@ -7,6 +7,7 @@ import './home.css';
 
 const Home = (props) => {
   const [gameInput, setGameInput] = useState([]);
+  const [searchInput, setSearchInput] = useState('');
 
   const gameListUrl = 'https://rawg-video-games-database.p.rapidapi.com/games';
   console.log(process.env.REACT_APP_API_KEY)
@@ -41,21 +42,24 @@ const Home = (props) => {
         alert("Cannot Add Game");
       });
   };
-  console.log(gameInput)
+
+  const handleSearchInput = (searchInput) => {
+    const searchArr = gameInput.filter(el => (el.name.toLowerCase().includes(searchInput.toLowerCase())) ? el : null)
+    setGameInput(searchArr)
+  }
+
   return (
     <div className='home-container'>
       <header>
         <div>
           <input id='home-search-input'
             name='search'
-            type='text'
-            // value={}
             placeholder='Game Name'
-          // onChange={}
+            onChange={(e) => setSearchInput(e.target.value)}
           />
         </div>
         <div>
-          <button id='home-search-button'>Find Game</button>
+          <button onClick={() => handleSearchInput(searchInput)} id='home-search-button'>Find Game</button>
         </div>
       </header>
       <section>

@@ -19,7 +19,7 @@ const Menu = (props) => {
 
   return (
     <div style={menuContainer}>
-      {props.isLoggedIn ?
+      {props.location.pathname !== '/' ?
         <nav style={menuNav}>
           <h1 id='menu-header'>MyGameStash</h1>
           <ul id='menu-list-container'>
