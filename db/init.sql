@@ -18,6 +18,7 @@ CREATE TABLE contact_form
 CREATE TABLE game_list
 (
   user_game_id SERIAL PRIMARY KEY,
-  user_games INT,
+  name TEXT,
+  background_image TEXT,
   user_id INT REFERENCES user_profile(user_id)
 );

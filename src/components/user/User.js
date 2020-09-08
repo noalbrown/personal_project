@@ -10,11 +10,11 @@ const User = (props) => {
 
   useEffect(() => {
     if (props.user) {
-      getGame();
+      getList();
     }
   }, [props.user]);
 
-  const getGame = () => {
+  const getList = () => {
     axios
       .get(`/api/userList/${props.user.user_id}`)
       .then((res) => {
@@ -29,11 +29,11 @@ const User = (props) => {
     axios
       .delete(`/api/deleteGame/${(user_game_id)}`)
       .then((res) => {
-        getGame();
+        getList();
       })
       .catch(error => console.log(error))
   }
-
+  console.log(userList)
   return !userList[0] ? (
     <div id="user-empty">
       <h2>You have 0 games in your list</h2>
@@ -45,8 +45,10 @@ const User = (props) => {
         <table>
           <thead>
             {userList.map((el, i) => <tr key={i} className='user-table-row'>
-              <td id='table-data-1'>{el.user_games.background_image}</td>
-              <td id='table-data-2'>{el.user_games}</td>
+              <td id='table-data-1'>
+                <img src={el.background_image} />
+              </td>
+              <td id='table-data-2'>{el.name}</td>
               <td id='table-data-3'>
                 <button onClick={() => deleteGame(el.user_game_id)}>X</button>
               </td>

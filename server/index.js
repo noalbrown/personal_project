@@ -22,7 +22,7 @@ app.use(
 );
 
 app.get('/api/users', ctrl.getAll);
-app.get('/api/userList/:user_game_id', ctrl.getList);
+app.get('/api/userList/:user_id', ctrl.getList);
 app.get('/api/usersAdmin', ctrl.getAllAdmin);
 app.post('/api/post', ctrl.create);
 app.post('/api/addGame', ctrl.addGame);

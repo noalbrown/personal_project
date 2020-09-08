@@ -12,8 +12,8 @@ module.exports = {
 
   getList: (req, res) => {
     const db = req.app.get('db');
-    const { user_game_id } = req.params;
-    db.get_userList(user_game_id)
+    const { user_id } = req.params;
+    db.get_userList(user_id)
       .then(get_userList => res.status(200).send(get_userList))
       .catch(err => {
         res.status(500).send({ errorMessage: "Could not Get list" });
@@ -47,12 +47,12 @@ module.exports = {
 
   addGame: async (req, res) => {
     const db = req.app.get('db');
-    const { user_games, email } = req.body;
+    const { name, background_image, email } = req.body;
     console.log(email)
     let foundUser = await db.get_email(email);
     foundUser = foundUser[0];
     delete foundUser.password;
-    db.add_game(+user_games, +foundUser.user_id)
+    db.add_game(name, background_image, +foundUser.user_id)
       .then(() => res.sendStatus(200))
       .catch(err => {
         res.status(500).send({ errorMessage: "Could not create" });
@@ -64,7 +64,7 @@ module.exports = {
     const db = req.app.get('db');
     console.log(req.params)
     db.delete_user(+req.params.user_id)
-      .then((user_list) => res.send(user_list))
+      .then((user_list) => res.status(200).send(user_list))
       .catch(err => {
         res.status(500).send({ errorMessage: 'Could not delete' });
         console.log(err)

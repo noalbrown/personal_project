@@ -28,11 +28,12 @@ const Home = (props) => {
       });
   }, []);
 
-  const addGame = (id) => {
+  const addGame = (name, background_image) => {
     console.log(props)
     axios
       .post('/api/addGame', {
-        user_games: id,
+        name: name,
+        background_image: background_image,
         email: props.user.email
       })
       .then((res) => {
@@ -69,7 +70,7 @@ const Home = (props) => {
               <img alt='Game Cover' src={el.background_image} style={gameImgStyle} />
             </li>
             <li>{el.name}</li>
-            <button onClick={() => addGame(el.id)}>ADD</button>
+            <button onClick={() => addGame(el.name, el.background_image)}>ADD</button>
           </ul>
         )}
       </section>

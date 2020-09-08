@@ -10,7 +10,6 @@ const Admin = (props) => {
     axios
       .get("/api/usersAdmin")
       .then((res) => {
-        console.log(res.data)
         setUsers(res.data)
       })
       .catch((err) => {
@@ -26,7 +25,7 @@ const Admin = (props) => {
       })
       .catch(error => console.log(error))
   }
-
+  console.log(users)
   return (
     <div className='admin-container' style={{ backgroundColor: 'black' }}>
       <h1>ADMINISTRATOR AREA</h1>
@@ -44,7 +43,6 @@ const Admin = (props) => {
             <td>{el.form}</td>
             <td id='admin-button-container'>
               <button onClick={() => deleteUser(el.user_id)}>"Delete User"</button>
-              {console.log(el)}
             </td>
           </tr>)}
         </thead>

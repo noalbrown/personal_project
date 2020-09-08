@@ -19,7 +19,7 @@ const Menu = (props) => {
 
   return (
     <div style={menuContainer}>
-      {props.location.pathname !== '/' ?
+      {(props.location.pathname !== '/' && props.location.pathname !== '/admin') ?
         <nav style={menuNav}>
           <h1 id='menu-header'>MyGameStash</h1>
           <ul id='menu-list-container'>
