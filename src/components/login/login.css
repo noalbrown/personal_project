@@ -141,7 +141,7 @@
   height: 100%;
   width: 100%;
   background: white;
-  font-size: 2rem;
+  font-size: 4rem;
   font-weight: bolder;
   border-style: none;
 }
@@ -150,6 +150,10 @@
   cursor: pointer;
   color: #07e036;
   background-color: black;
+}
+
+#login-button:focus {
+  outline: none;
 }
 
 .new-user-input {
@@ -208,6 +212,10 @@
   cursor: pointer;
   color: #07e036;
   background-color: black;
+}
+
+#create-user-button:focus {
+  outline: none;
 }
 
 @media (max-width: 1280px) {

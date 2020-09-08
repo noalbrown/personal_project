@@ -34,7 +34,7 @@ const User = (props) => {
       })
       .catch(error => console.log(error))
   }
-  console.log(userList)
+
   return !userList[0] ? (
     <div id="user-empty">
       <h2>You have 0 games in your list</h2>
@@ -42,7 +42,7 @@ const User = (props) => {
     </div>
   ) : (
       <div className='user-container'>
-        <h1>My List</h1>
+        <h1>{props.user.first_name} {props.user.last_name}'s List</h1>
         <section>
           {userList.map((el, i) => <ul key={i} id='user-list-container'>
             <li id='user-li-1'>

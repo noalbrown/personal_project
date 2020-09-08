@@ -90,13 +90,16 @@
 #home-search-button {
   color: #07e036;
   background: black;
-  border: none;
+  border: thin solid #07e036;
   border-radius: 5%;
   height: 30px;
 }
 
 #home-search-button:hover {
   cursor: pointer;
+  color: black;
+  background: #07e036;
+  border: thin solid black;
 }
 
 #home-img-container {

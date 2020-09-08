@@ -69,13 +69,16 @@
 #home-search-button {
   color: $primary-color;
   background: black;
-  border:none;
+  border:thin solid $primary-color;
   border-radius: 5%;
   height: 30px;
 }
 
 #home-search-button:hover {
   cursor: pointer;
+  color:black;
+  background: $primary-color;
+  border:thin solid black;
 }
 
 #home-img-container {

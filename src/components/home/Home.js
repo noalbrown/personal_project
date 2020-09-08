@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { gameImgStyle } from './HomeStyle'
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
+import GamepadVariantOutlineIcon from '../svg/GamepadVariantOutlineIcon'
 import axios from 'axios';
 import './home.css';
 
@@ -55,12 +56,12 @@ const Home = (props) => {
         <div>
           <input id='home-search-input'
             name='search'
-            placeholder='Game Name'
+            placeholder='Search Games'
             onChange={(e) => setSearchInput(e.target.value)}
           />
         </div>
         <div>
-          <button onClick={() => handleSearchInput(searchInput)} id='home-search-button'>Find Game</button>
+          <button onClick={() => handleSearchInput(searchInput)} id='home-search-button'><GamepadVariantOutlineIcon /></button>
         </div>
       </header>
       <section>

@@ -1,3 +1,9 @@
+There is an unreachable administration page that allows viewing of user data, user feedback, and deletion of user accounts @ /admin
+
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
