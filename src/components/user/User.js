@@ -2,6 +2,7 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
+import { gameImgStyle } from '../home/HomeStyle';
 import axios from 'axios';
 import './user.css';
 
@@ -42,19 +43,17 @@ const User = (props) => {
   ) : (
       <div className='user-container'>
         <h1>My List</h1>
-        <table>
-          <thead>
-            {userList.map((el, i) => <tr key={i} className='user-table-row'>
-              <td id='table-data-1'>
-                <img src={el.background_image} />
-              </td>
-              <td id='table-data-2'>{el.name}</td>
-              <td id='table-data-3'>
-                <button onClick={() => deleteGame(el.user_game_id)}>X</button>
-              </td>
-            </tr>)}
-          </thead>
-        </table>
+        <section>
+          {userList.map((el, i) => <ul key={i} id='user-list-container'>
+            <li id='user-li-1'>
+              <img alt='GamePic' src={el.background_image} style={gameImgStyle} />
+            </li>
+            <li id='user-li-2'>{el.name}</li>
+            <li id='user-li-3'>
+              <button onClick={() => deleteGame(el.user_game_id)}>X</button>
+            </li>
+          </ul>)}
+        </section>
       </div>
     )
 }

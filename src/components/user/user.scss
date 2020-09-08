@@ -14,30 +14,36 @@
     font-family: $primary-font;
   }
 
-  table {
+  section {
     height:70%;
     width:70%;
+    overflow:scroll;
+    overflow: hidden;
   }
 }
 
-.user-table-row {
+#user-list-container {
   border:thick solid black;
+  height:20%;
+  display: flex;
+  align-items: center;
 }
 
-#table-data-1 {
+#user-li-1 {
   width:20%;
-  text-align: center;
+  height: 100%;
   border-right: thin solid black;
-  padding:2px;
 }
 
-#table-data-2 {
-  font-size: 1.5rem;
+#user-li-2 {
+  font-size: 1.75rem;
   padding:5px;
+  width: 70%;
+  padding-left:10px;
 }
 
-#table-data-3 {
-  width:5%;
+#user-li-3 {
+  width:10%;
 
   button {
     background: transparent;
@@ -60,5 +66,23 @@
 
   p {
     font-size: 1.25rem;
+  }
+}
+
+@media (max-width: $media-tablet) {
+  .user-container section {
+    width:90%;
+
+    #user-list-container {
+      height:15%;
+    }
+  }
+
+  #user-empty {
+    h2, p {
+      font-size: 1rem;
+      text-align: center;
+      padding: 20px;
+    }
   }
 }

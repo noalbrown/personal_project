@@ -8,15 +8,17 @@
   header {
     display: flex;
     justify-content: space-between;
-    padding-bottom: 5px;
     width: 40%;
+    padding: 5px;
 
     :first-child {
       width:65%;
+      height: 100%;
     }
 
     :nth-child(2) {
       width:30%;
+      height: 100%;
     }
   }
 
@@ -69,6 +71,7 @@
   background: black;
   border:none;
   border-radius: 5%;
+  height: 30px;
 }
 
 #home-search-button:hover {
@@ -83,6 +86,10 @@
 @media (max-width: $media-desktop) {
   .home-container > section > ul {
     height: 20%;
+  }
+
+  .home-container header {
+    width:80%;
   }
 }
 

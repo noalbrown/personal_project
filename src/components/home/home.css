@@ -24,16 +24,18 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding-bottom: 5px;
   width: 40%;
+  padding: 5px;
 }
 
 .home-container header :first-child {
   width: 65%;
+  height: 100%;
 }
 
 .home-container header :nth-child(2) {
   width: 30%;
+  height: 100%;
 }
 
 .home-container section {
@@ -90,6 +92,7 @@
   background: black;
   border: none;
   border-radius: 5%;
+  height: 30px;
 }
 
 #home-search-button:hover {
@@ -104,6 +107,9 @@
 @media (max-width: 1280px) {
   .home-container > section > ul {
     height: 20%;
+  }
+  .home-container header {
+    width: 80%;
   }
 }
 

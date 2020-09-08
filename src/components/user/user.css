@@ -26,32 +26,42 @@
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }
 
-.user-container table {
+.user-container section {
   height: 70%;
   width: 70%;
+  overflow: scroll;
+  overflow: hidden;
 }
 
-.user-table-row {
+#user-list-container {
   border: thick solid black;
+  height: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-#table-data-1 {
+#user-li-1 {
   width: 20%;
-  text-align: center;
+  height: 100%;
   border-right: thin solid black;
-  padding: 2px;
 }
 
-#table-data-2 {
-  font-size: 1.5rem;
+#user-li-2 {
+  font-size: 1.75rem;
   padding: 5px;
+  width: 70%;
+  padding-left: 10px;
 }
 
-#table-data-3 {
-  width: 5%;
+#user-li-3 {
+  width: 10%;
 }
 
-#table-data-3 button {
+#user-li-3 button {
   background: transparent;
   border: none;
   font-size: 2.5rem;
@@ -86,5 +96,19 @@
 
 #user-empty p {
   font-size: 1.25rem;
+}
+
+@media (max-width: 768px) {
+  .user-container section {
+    width: 90%;
+  }
+  .user-container section #user-list-container {
+    height: 15%;
+  }
+  #user-empty h2, #user-empty p {
+    font-size: 1rem;
+    text-align: center;
+    padding: 20px;
+  }
 }
 /*# sourceMappingURL=user.css.map */
