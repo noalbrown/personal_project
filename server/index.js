@@ -4,7 +4,7 @@ const session = require('express-session');
 const app = express();
 const massive = require('massive');
 const authCtrl = require('./controllers/authCtrl');
-const ctrl = require('./controllers/ctrl')
+const ctrl = require('./controllers/ctrl');
 
 const { SESSION_SECRET, CONNECTION_STRING, SERVER_PORT } = process.env;
 
@@ -20,6 +20,8 @@ app.use(
     },
   })
 );
+
+app.use(express.static(`${__dirname}/../build`));
 
 app.get('/api/users', ctrl.getAll);
 app.get('/api/userList/:user_id', ctrl.getList);
