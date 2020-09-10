@@ -3,7 +3,6 @@ import axios from 'axios';
 import { getUser } from '../../redux/reducer';
 import { connect } from 'react-redux';
 import { boxSectionStyle, newUserButtonStyle } from './LoginStyle';
-import LoginVariantIcon from '../svg/LoginVariantIcon'
 import './login.css';
 
 const Login = (props) => {
@@ -100,7 +99,7 @@ const Login = (props) => {
             <button
               id='login-button'
               onClick={login}
-            ><LoginVariantIcon /></button>
+            >Login</button>
           </div>
           <div id='create-user-button-container'>
             <button
