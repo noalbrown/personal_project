@@ -44,10 +44,20 @@
           align-items: center;
 }
 
+#user-list-container:hover {
+  font-weight: bolder;
+}
+
 #user-li-1 {
   width: 20%;
   height: 100%;
   border-right: thin solid black;
+}
+
+#user-li-1:hover {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  padding: 10px 0 0 30px;
 }
 
 #user-li-2 {
@@ -66,6 +76,10 @@
   border: none;
   font-size: 2.5rem;
   font-weight: bolder;
+}
+
+#user-li-3 button:hover {
+  font-size: 3.5rem;
 }
 
 #user-empty {

@@ -27,12 +27,21 @@
   height:20%;
   display: flex;
   align-items: center;
+
+  &:hover {
+    font-weight: bolder;
+  }
 }
 
 #user-li-1 {
   width:20%;
   height: 100%;
   border-right: thin solid black;
+
+  &:hover {
+    transform: scale(1.5);
+    padding: 10px 0 0 30px;
+  }
 }
 
 #user-li-2 {
@@ -50,6 +59,10 @@
     border:none;
     font-size: 2.5rem;
     font-weight: bolder;
+
+    &:hover {
+      font-size: 3.5rem;
+    }
   }
 }
 
