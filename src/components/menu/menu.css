@@ -36,6 +36,10 @@
   font-style: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }
 
+.menu-list a:hover {
+  color: white;
+}
+
 @media (max-width: 1280px) {
   #menu-header {
     position: relative;

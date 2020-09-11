@@ -27,6 +27,10 @@
   font-style: $primary-font;
 }
 
+.menu-list a:hover {
+  color:white;
+}
+
 @media (max-width: $media-desktop){
   #menu-header {
     position:relative;

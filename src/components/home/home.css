@@ -25,6 +25,7 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 40%;
+  height: 5%;
   padding: 5px;
 }
 
@@ -74,11 +75,15 @@
   font-size: 1.25rem;
   letter-spacing: 0.1rem;
   margin-right: 20px;
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
 }
 
 .home-container section ul button:hover {
   cursor: pointer;
-  font-size: 1.5rem;
+  font-style: italic;
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
 }
 
 #home-search-input {
@@ -87,24 +92,54 @@
   border: thin solid black;
 }
 
+#home-search-input::-webkit-input-placeholder {
+  color: black;
+  padding-left: 5px;
+}
+
+#home-search-input:-ms-input-placeholder {
+  color: black;
+  padding-left: 5px;
+}
+
+#home-search-input::-ms-input-placeholder {
+  color: black;
+  padding-left: 5px;
+}
+
+#home-search-input::placeholder {
+  color: black;
+  padding-left: 5px;
+}
+
 #home-search-button {
   color: #07e036;
   background: black;
   border: thin solid #07e036;
   border-radius: 5%;
-  height: 30px;
+  height: 100%;
 }
 
 #home-search-button:hover {
   cursor: pointer;
   color: black;
-  background: #07e036;
+  background-color: #07e036;
   border: thin solid black;
+  -webkit-transition: background-color 0.5s;
+  transition: background-color 0.5s;
 }
 
 #home-img-container {
   width: 25%;
   height: 100%;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+#home-img-container:hover {
+  padding-left: 20px;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
 }
 
 @media (max-width: 1280px) {

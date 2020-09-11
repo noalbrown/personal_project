@@ -38,7 +38,7 @@ const User = (props) => {
   return !userList[0] ? (
     <div id="user-empty">
       <h2>You have 0 games in your list</h2>
-      <p>Please head to the <Link style={{ color: 'white', fontSize: '1.5rem' }} to='/home'>GAMES</Link> page and choose some games.</p>
+      <p>Please head to the <Link id="user-link" to='/home'>GAMES</Link> page and choose some games.</p>
     </div>
   ) : (
       <div className='user-container'>

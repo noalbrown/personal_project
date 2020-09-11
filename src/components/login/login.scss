@@ -26,6 +26,13 @@
       flex-direction: column;
       justify-content: space-around;
       align-items: center;
+      opacity: 0.7;
+      transition: opacity 1s;
+}
+
+.login-sections:hover {
+  opacity: 1;
+  transition: opacity 1s;
 }
 
 .login-boxes {
@@ -44,6 +51,7 @@
         width:75%;
         margin: 10px;
         padding-top: 15px;
+        border-radius: 5%;
         
         &::placeholder {
           color:black;
@@ -76,10 +84,11 @@
 #login-button {
   height:100%;
   width:100%;
-  background: white;
+  background-color: white;
   font-size: 2rem;
   font-weight: bolder;
   border-style: none;
+  transition: background-color 0.5s;
 }
 
 #login-button:hover {
@@ -120,6 +129,7 @@
   cursor: pointer;
   color: $primary-color;
   background-color: black;
+  transition: background-color 0.5s;
 }
 
 #create-user-button:focus {

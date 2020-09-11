@@ -17,6 +17,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border-radius: 10%;
 
   h1 {
     font-size: 40px;
@@ -95,7 +96,8 @@
   button:hover {
     cursor: pointer;
     font-weight: bolder;
-    transform: scale(2, 1.5);
+    transform: scale(1.2);
+    transition: transform 0.5s;
   }
 }
 

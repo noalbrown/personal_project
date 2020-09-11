@@ -56,7 +56,7 @@ const Home = (props) => {
         <div>
           <input id='home-search-input'
             name='search'
-            placeholder='Search Games'
+            placeholder='Search Games >>>>'
             onChange={(e) => setSearchInput(e.target.value)}
           />
         </div>

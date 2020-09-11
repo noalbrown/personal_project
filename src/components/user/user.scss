@@ -69,6 +69,15 @@
   }
 }
 
+#user-link {
+  font-size: 1.5rem;
+  color: white;
+}
+
+#user-link:hover {
+  color: green;
+}
+
 @media (max-width: $media-tablet) {
   .user-container section {
     width:90%;
